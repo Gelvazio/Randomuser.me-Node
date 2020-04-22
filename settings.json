@@ -8,5 +8,6 @@
   "stripePublishKey": "",
   "stripePrivateKey": "",
   "googleCaptchaKey": "",
-  "googleCaptchaSecretKey": ""
+  "googleCaptchaSecretKey": "",
+  "mongo_url": "mongodb+srv://omnistack:omnistack@cluster0-dfpzp.mongodb.net/semana09?retryWrites=true&w=majority"
 }

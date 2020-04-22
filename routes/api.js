@@ -88,7 +88,10 @@ async function genUser(req, res, version) {
       clients[ip] += Number(results);
     }
 
-    const ret = await legRequest(`https://api.randomapi.com/${legacy[version].hash}?noinfo&${qs.stringify(req.query)}`);
+    const url_servidor_local = 'https://localhost:3000/';
+    const url_servidor_producao = 'https://api.randomapi.com/';
+
+    const ret = await legRequest(`${ url_local }${legacy[version].hash}?noinfo&${qs.stringify(req.query)}`);
     if (req.query.fmt === 'json') {
       res.setHeader('Content-Type', 'application/json');
     } else if (req.query.fmt === 'xml') {
